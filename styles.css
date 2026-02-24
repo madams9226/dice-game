@@ -1,41 +1,100 @@
+/* Layout */
 .container {
   width: 70%;
   margin: auto;
   text-align: center;
 }
 
+/* Dice blocks */
 .dice {
   text-align: center;
   display: inline-block;
-
+  margin: 0 20px;
 }
 
+/* Page background */
 body {
   background-color: #393E46;
+  margin: 0;
+  padding: 0;
 }
 
+/* Heading */
 h1 {
-  margin: 30px;
-  font-family: 'Lobster', cursive;
+  margin: 30px 0 20px;
+  font-family: "Lobster", cursive;
   text-shadow: 5px 0 #232931;
-  font-size: 8rem;
+  font-size: 5rem; /* was 8rem - reduced so the button stays visible */
   color: #4ECCA3;
 }
 
+/* Player labels */
 p {
   font-size: 2rem;
   color: #4ECCA3;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
+  margin: 20px 0;
 }
 
+/* Dice images */
 img {
   width: 80%;
+  max-width: 220px; /* keeps them from getting huge on big screens */
+  height: auto;
 }
 
+/* Button */
+button {
+  display: block;
+  margin: 30px auto 0;
+  padding: 14px 28px;
+  font-size: 1.25rem;
+  font-family: "Indie Flower", cursive;
+  background-color: #4ECCA3;
+  color: #232931;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.08s ease, opacity 0.15s ease;
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Footer */
 footer {
   margin-top: 5%;
   color: #EEEEEE;
   text-align: center;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
+  padding-bottom: 25px;
+}
 
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .container {
+    width: 92%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .dice {
+    margin: 0 10px;
+  }
+
+  img {
+    max-width: 160px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 260px;
+  }
 }
