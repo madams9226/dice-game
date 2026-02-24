@@ -6,25 +6,20 @@ function rollDice() {
   var randomDiceImage1 = "images/dice" + randomNumber1 + ".png";
   var randomDiceImage2 = "images/dice" + randomNumber2 + ".png";
 
-  var image1 = document.querySelector(".img1");
-  var image2 = document.querySelector(".img2");
-
-  image1.setAttribute("src", randomDiceImage1);
-  image2.setAttribute("src", randomDiceImage2);
-
-  var heading = document.querySelector("h1");
+  document.querySelector(".img1").setAttribute("src", randomDiceImage1);
+  document.querySelector(".img2").setAttribute("src", randomDiceImage2);
 
   if (randomNumber1 > randomNumber2) {
-    heading.innerHTML = "🚩 Player 1 Wins!";
-  } else if (randomNumber1 < randomNumber2) {
-    heading.innerHTML = "Player 2 Wins! 🚩";
-  } else {
-    heading.innerHTML = "Draw!";
+    document.querySelector("h1").innerHTML = "🚩 Player 1 Wins!";
+  } 
+  else if (randomNumber1 < randomNumber2) {
+    document.querySelector("h1").innerHTML = "Player 2 Wins! 🚩";
+  } 
+  else {
+    document.querySelector("h1").innerHTML = "Draw!";
   }
-
 }
 
-// This makes it roll automatically when the page loads
+// Auto roll on page load
 rollDice();
 
-     
